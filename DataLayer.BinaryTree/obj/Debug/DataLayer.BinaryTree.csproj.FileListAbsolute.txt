@@ -1,0 +1,5 @@
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\bin\Debug\DataLayer.BinaryTree.dll
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\bin\Debug\DataLayer.BinaryTree.pdb
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\obj\Debug\DataLayer.BinaryTree.dll
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\obj\Debug\DataLayer.BinaryTree.pdb
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\obj\Debug\DataLayer.BinaryTree.csprojResolveAssemblyReference.cache

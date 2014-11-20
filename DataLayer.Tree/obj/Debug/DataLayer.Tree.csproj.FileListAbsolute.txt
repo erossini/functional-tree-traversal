@@ -1,0 +1,5 @@
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.Tree\bin\Debug\DataLayer.Tree.dll
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.Tree\bin\Debug\DataLayer.Tree.pdb
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.Tree\obj\Debug\DataLayer.Tree.csprojResolveAssemblyReference.cache
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.Tree\obj\Debug\DataLayer.Tree.dll
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.Tree\obj\Debug\DataLayer.Tree.pdb

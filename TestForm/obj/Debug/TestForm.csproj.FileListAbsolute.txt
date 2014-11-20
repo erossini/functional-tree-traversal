@@ -1,0 +1,10 @@
+D:\TestCareers\AdBrain\functional-tree-traversal\TestForm\bin\Debug\TestForm.exe
+D:\TestCareers\AdBrain\functional-tree-traversal\TestForm\bin\Debug\TestForm.pdb
+D:\TestCareers\AdBrain\functional-tree-traversal\TestForm\bin\Debug\DataLayer.BinaryTree.dll
+D:\TestCareers\AdBrain\functional-tree-traversal\TestForm\bin\Debug\DataLayer.BinaryTree.pdb
+D:\TestCareers\AdBrain\functional-tree-traversal\TestForm\obj\Debug\TestForm.csprojResolveAssemblyReference.cache
+D:\TestCareers\AdBrain\functional-tree-traversal\TestForm\obj\Debug\TestForm.Form1.resources
+D:\TestCareers\AdBrain\functional-tree-traversal\TestForm\obj\Debug\TestForm.Properties.Resources.resources
+D:\TestCareers\AdBrain\functional-tree-traversal\TestForm\obj\Debug\TestForm.csproj.GenerateResource.Cache
+D:\TestCareers\AdBrain\functional-tree-traversal\TestForm\obj\Debug\TestForm.exe
+D:\TestCareers\AdBrain\functional-tree-traversal\TestForm\obj\Debug\TestForm.pdb

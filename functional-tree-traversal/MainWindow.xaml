@@ -1,0 +1,11 @@
+﻿<Window x:Class="functional_tree_traversal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Image x:Name="Image1" Margin="10,10,10,43"/>
+        <StatusBar x:Name="StatusBar1" Margin="0,-1,0,0" Height="35" VerticalAlignment="Bottom">
+            <StatusBarItem x:Name="StatusBarItem1" Content="" Height="35" VerticalAlignment="Top"/>
+        </StatusBar>
+    </Grid>
+</Window>

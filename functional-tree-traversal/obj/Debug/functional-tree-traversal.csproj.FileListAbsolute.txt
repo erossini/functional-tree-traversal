@@ -1,0 +1,14 @@
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\obj\Debug\functional-tree-traversal.csprojResolveAssemblyReference.cache
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\obj\Debug\MainWindow.baml
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\obj\Debug\MainWindow.g.cs
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\obj\Debug\App.g.cs
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\obj\Debug\functional-tree-traversal_MarkupCompile.cache
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\obj\Debug\functional-tree-traversal.g.resources
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\obj\Debug\functional_tree_traversal.Properties.Resources.resources
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\obj\Debug\functional-tree-traversal.csproj.GenerateResource.Cache
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\bin\Debug\functional-tree-traversal.exe
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\bin\Debug\functional-tree-traversal.pdb
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\obj\Debug\functional-tree-traversal.exe
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\obj\Debug\functional-tree-traversal.pdb
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\bin\Debug\DataLayer.BinaryTree.dll
+D:\TestCareers\AdBrain\functional-tree-traversal\functional-tree-traversal\bin\Debug\DataLayer.BinaryTree.pdb
