@@ -48,7 +48,11 @@ namespace functional_tree_traversal
         {
             InitializeComponent();
             
-            _tree = new BinaryTree();
+            //_tree = new BinaryTree();
+
+            TreeDatabase td = new TreeDatabase();
+            _tree = td.Load();
+
             bool result = _tree.Add(new Node(new NodeData { Age = 30, Name = "Pippo" }));
             PaintTree();
 
@@ -61,11 +65,63 @@ namespace functional_tree_traversal
             _tree.Add(new Node(new NodeData { Age = 22, Name = "Quo" }));
             PaintTree();
 
-            _tree.Add(new Node(new NodeData { Age = 40, Name = "Qua" }));
+            _tree.Add(new Node(new NodeData { Age = 42, Name = "QuaRush" }));
             PaintTree();
 
             System.Console.WriteLine("The sum of nodes are " + _tree.Count);
             Console.ReadLine();
+
+            Console.WriteLine("Inorder traversal resulting Tree Sort");
+            Inorder(_tree.RootNode);
+            Console.WriteLine(" ");
+
+            Console.WriteLine();
+            Console.WriteLine("Preorder traversal");
+            Preorder(_tree.RootNode);
+            Console.WriteLine(" ");
+
+            Console.WriteLine();
+            Console.WriteLine("Postorder traversal");
+            Postorder(_tree.RootNode);
+            Console.WriteLine(" ");
+
+            Console.WriteLine();
+            Console.WriteLine("Exists an item in the tree");
+            Console.WriteLine(_tree.Exists(new Node(new NodeData { Age = 22, Name = "Quo" })));
+
+            td.DeleteAll();
+            td.Save(_tree);
+        }
+
+        public void Preorder(Node Root)
+        {
+            if (Root != null)
+            {
+                Console.Write(Root.Value.NodeId.ToString() + " ");
+                Preorder(Root.Left);
+                Preorder(Root.Right);
+            }
+        }
+
+        public void Inorder(Node Root)
+        {
+            if (Root != null)
+            {
+                Inorder(Root.Left);
+                Console.Write(Root.Value.NodeId.ToString() + " ");
+                Inorder(Root.Right);
+            }
+        }
+
+        public void Postorder(Node Root)
+        {
+            if (Root != null)
+            {
+                Postorder(Root.Left);
+                Postorder(Root.Right);
+
+                Console.Write(Root.Value.NodeId.ToString() + " ");
+            }
         }
     }
 }

@@ -3,11 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "functional-tree-traversal", "functional-tree-traversal\functional-tree-traversal.csproj", "{0B40B3D3-4FC4-4DA9-92CD-43C9977C5FFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer.Tree", "DataLayer.Tree\DataLayer.Tree.csproj", "{F7248EC2-860C-4785-831E-E027C62A4F11}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer.BinaryTree", "DataLayer.BinaryTree\DataLayer.BinaryTree.csproj", "{55D2D686-C285-4A0F-BA68-3B1E387BBB00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{FBEE984F-5404-494A-B8F0-118FA182EF8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{39CAE8C2-674D-4B58-AD54-6E1CBB9F92B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8C6E7D93-95D0-448E-8C55-622FF55041F6}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{DF8F5918-3C46-4099-8121-0AAE09699885}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Tests", "Api.Tests\Api.Tests.csproj", "{8DB4F264-7042-43DA-86FC-DB7A7EB7699A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +30,6 @@ Global
 		{0B40B3D3-4FC4-4DA9-92CD-43C9977C5FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B40B3D3-4FC4-4DA9-92CD-43C9977C5FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B40B3D3-4FC4-4DA9-92CD-43C9977C5FFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7248EC2-860C-4785-831E-E027C62A4F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7248EC2-860C-4785-831E-E027C62A4F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7248EC2-860C-4785-831E-E027C62A4F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7248EC2-860C-4785-831E-E027C62A4F11}.Release|Any CPU.Build.0 = Release|Any CPU
 		{55D2D686-C285-4A0F-BA68-3B1E387BBB00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{55D2D686-C285-4A0F-BA68-3B1E387BBB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55D2D686-C285-4A0F-BA68-3B1E387BBB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,8 +38,20 @@ Global
 		{FBEE984F-5404-494A-B8F0-118FA182EF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBEE984F-5404-494A-B8F0-118FA182EF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBEE984F-5404-494A-B8F0-118FA182EF8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF8F5918-3C46-4099-8121-0AAE09699885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8F5918-3C46-4099-8121-0AAE09699885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF8F5918-3C46-4099-8121-0AAE09699885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF8F5918-3C46-4099-8121-0AAE09699885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB4F264-7042-43DA-86FC-DB7A7EB7699A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB4F264-7042-43DA-86FC-DB7A7EB7699A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB4F264-7042-43DA-86FC-DB7A7EB7699A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB4F264-7042-43DA-86FC-DB7A7EB7699A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF8F5918-3C46-4099-8121-0AAE09699885} = {39CAE8C2-674D-4B58-AD54-6E1CBB9F92B4}
+		{8DB4F264-7042-43DA-86FC-DB7A7EB7699A} = {39CAE8C2-674D-4B58-AD54-6E1CBB9F92B4}
 	EndGlobalSection
 EndGlobal

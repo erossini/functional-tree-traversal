@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TreeModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tree" EntityType="TreeModel.Tree" />
+  </EntityContainer>
+  <EntityType Name="Tree">
+    <Key>
+      <PropertyRef Name="node_id" />
+      <PropertyRef Name="age" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="node_id" Type="Int32" Nullable="false" />
+    <Property Name="age" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="level" Type="Int16" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="path" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+</Schema>

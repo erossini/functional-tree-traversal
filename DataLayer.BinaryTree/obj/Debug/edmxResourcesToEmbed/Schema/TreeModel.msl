@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TreeModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Tree">
+      <EntityTypeMapping TypeName="TreeModel.Tree">
+        <MappingFragment StoreEntitySet="Tree">
+          <ScalarProperty Name="node_id" ColumnName="node_id" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="path" ColumnName="path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

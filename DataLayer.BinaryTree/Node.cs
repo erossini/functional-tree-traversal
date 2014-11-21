@@ -12,7 +12,12 @@ namespace DataLayer.BinaryTree
     public class Node
     {
         /// <summary>
-        /// gets or sets the value of current node, the value is unique
+        /// gets or sets the path of current node
+        /// </summary>
+        public string NodePath { get; set; }
+
+        /// <summary>
+        /// gets or sets the value of current node
         /// </summary>
         public NodeData Value { get; set; }
 
@@ -53,33 +58,6 @@ namespace DataLayer.BinaryTree
             Right = left;
             Left = right;
             Value = value;
-        }
-
-        /// <summary>
-        /// the backgroung image of each nodes, the size of this bitmap affects the quality of output image
-        /// </summary>
-        private static Bitmap _nodeBg = new Bitmap(30, 25);
-
-        /// <summary>
-        /// the free space between nodes on the drawed image, 
-        /// </summary>
-        private static Size _freeSpace = new Size(_nodeBg.Width / 8, (int)(_nodeBg.Height * 1.3f));
-
-        /// <summary>
-        /// a value which is used, (on drawing the Value of the nodes), in order to make sure the drawed image would be the same for any size of _nodeBg.<see cref="_nodeBg"/>
-        /// </summary>
-        private static readonly float Coef = _nodeBg.Width / 40f;
-
-        /// <summary>
-        /// the constructor of static members
-        /// </summary>
-        static Node()
-        {
-            var g = Graphics.FromImage(_nodeBg);                                    // get a Graphics from _nodeBg bitmap, 
-            g.SmoothingMode = SmoothingMode.HighQuality;                            // set the smoothing mode
-            var rcl = new Rectangle(1, 1, _nodeBg.Width - 2, _nodeBg.Height - 2);   // get a rectangle of drawer
-            g.FillRectangle(Brushes.White, rcl);
-            g.DrawEllipse(new Pen(Color.Black, 1.2f), rcl);                          // draw ellipse, you could also comment this line, and uncomment the above line as another option for background image
         }
 
         /// <summary>
@@ -220,6 +198,58 @@ namespace DataLayer.BinaryTree
         }
 
         /// <summary>
+        /// returns true if the current node or it's childs contains the inserted value
+        /// </summary>
+        public bool Exists(Node value)
+        {
+            var res = value.Value.Age == Value.Age;
+            if (!res && Left != null)
+                res = Left.Exists(value);
+            if (!res && Right != null)
+                res = Right.Exists(value);
+            return res;
+        }
+
+        /// <summary>
+        /// the count of nodes under this node + 1
+        /// </summary>
+        public int Count
+        {
+            get
+            {
+                return 1 + (Left != null ? Left.Count : 0) + (Right != null ? Right.Count : 0);
+            }
+        }
+
+        #region Draw tree
+        /// <summary>
+        /// the backgroung image of each nodes, the size of this bitmap affects the quality of output image
+        /// </summary>
+        private static Bitmap _nodeBg = new Bitmap(30, 25);
+
+        /// <summary>
+        /// the free space between nodes on the drawed image, 
+        /// </summary>
+        private static Size _freeSpace = new Size(_nodeBg.Width / 8, (int)(_nodeBg.Height * 1.3f));
+
+        /// <summary>
+        /// a value which is used, (on drawing the Value of the nodes), in order to make sure the drawed image would be the same for any size of _nodeBg.<see cref="_nodeBg"/>
+        /// </summary>
+        private static readonly float Coef = _nodeBg.Width / 40f;
+
+        /// <summary>
+        /// the constructor of static members
+        /// </summary>
+        static Node()
+        {
+            var g = Graphics.FromImage(_nodeBg);                                    // get a Graphics from _nodeBg bitmap, 
+            g.SmoothingMode = SmoothingMode.HighQuality;                            // set the smoothing mode
+            var rcl = new Rectangle(1, 1, _nodeBg.Width - 2, _nodeBg.Height - 2);   // get a rectangle of drawer
+            g.FillRectangle(Brushes.White, rcl);
+            g.DrawEllipse(new Pen(Color.Black, 1.2f), rcl);                          // draw ellipse, you could also comment this line, and uncomment the above line as another option for background image
+        }
+
+        /// <summary>
         /// the last up to date image of current node and it's childs.
         /// </summary>
         Image _lastImage;
@@ -328,28 +358,6 @@ namespace DataLayer.BinaryTree
             return result;
         }
 
-        /// <summary>
-        /// returns true if the current node or it's childs containd the inserted value
-        /// </summary>
-        public bool Exists(Node value)
-        {
-            var res = value.Value.Age == Value.Age;
-            if (!res && Left != null)
-                res = Left.Exists(value);
-            if (!res && Right != null)
-                res = Right.Exists(value);
-            return res;
-        }
-
-        /// <summary>
-        /// the count of nodes under this node + 1
-        /// </summary>
-        public int Count
-        {
-            get
-            {
-                return 1 + (Left != null ? Left.Count : 0) + (Right != null ? Right.Count : 0);
-            }
-        }
+        #endregion
     }
 }

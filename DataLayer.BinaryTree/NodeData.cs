@@ -8,5 +8,10 @@ namespace DataLayer.BinaryTree
     {
         public int Age { get; set; }
         public string Name { get; set; }
+
+        /// <summary>
+        /// get or set the value of id node from database
+        /// </summary>
+        public int NodeId { get; set; }
     }
 }

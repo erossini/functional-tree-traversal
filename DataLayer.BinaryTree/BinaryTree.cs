@@ -15,13 +15,8 @@ namespace DataLayer.BinaryTree
 
         public BinaryTree()
         {
-            RootNode = new Node(new NodeData { Age = 0, Name = "" });
+            RootNode = new Node(new NodeData { Age = -1, Name = "" });
         }
-
-        /// <summary>
-        /// gets the count of nodes on the tree
-        /// </summary>
-        public int Count { get { return count; } }
 
         /// <summary>
         /// adds a node to the tree
@@ -47,16 +42,9 @@ namespace DataLayer.BinaryTree
         }
 
         /// <summary>
-        /// Removes the node containing the inserted value.
-        /// returns true if could find and remove the node.
-        /// return false if the value does not exist on any of nodes. (except rootnode)
+        /// gets the count of nodes on the tree
         /// </summary>
-        public bool Remove(Node value)
-        {
-            bool isRootNode;
-            var res = RootNode.Remove(value, out isRootNode);
-            return !isRootNode && res;// return false if the inserted value is on rootNode, or the value does not exist on any of nodes
-        }
+        public int Count { get { return count; } }
 
         // draw
         public Image Draw()
@@ -72,6 +60,18 @@ namespace DataLayer.BinaryTree
         public bool Exists(Node item)
         {
             return RootNode.Exists(item);
+        }
+
+        /// <summary>
+        /// Removes the node containing the inserted value.
+        /// returns true if could find and remove the node.
+        /// return false if the value does not exist on any of nodes. (except rootnode)
+        /// </summary>
+        public bool Remove(Node value)
+        {
+            bool isRootNode;
+            var res = RootNode.Remove(value, out isRootNode);
+            return !isRootNode && res;// return false if the inserted value is on rootNode, or the value does not exist on any of nodes
         }
     }
 }

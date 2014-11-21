@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TreeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TreeModelStoreContainer">
+    <EntitySet Name="Tree" EntityType="TreeModel.Store.Tree" store:Type="Tables" store:Schema="dbo" store:Name="Tree">
+      <DefiningQuery>SELECT 
+      [Tree].[node_id] AS [node_id], 
+      [Tree].[age] AS [age], 
+      [Tree].[name] AS [name], 
+      [Tree].[level] AS [level], 
+      [Tree].[path] AS [path]
+      FROM [dbo].[Tree] AS [Tree]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Tree.dbo.Tree' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6005: The data type 'hierarchyid' is currently not supported for the target .NET Framework version; the column 'hid' in table 'Tree.dbo.Tree' was excluded.
+      warning 6005: The data type 'hierarchyid' is currently not supported for the target .NET Framework version; the column 'parent' in table 'Tree.dbo.Tree' was excluded.
+      -->
+  <EntityType Name="Tree">
+    <Key>
+      <PropertyRef Name="node_id" />
+      <PropertyRef Name="age" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="node_id" Type="int" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="level" Type="smallint" StoreGeneratedPattern="Computed" />
+    <Property Name="path" Type="nvarchar" StoreGeneratedPattern="Computed" />
+  </EntityType>
+</Schema>
