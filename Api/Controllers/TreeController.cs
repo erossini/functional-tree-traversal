@@ -11,13 +11,15 @@ namespace Api.Controllers
     {
         public ActionResult NewNode(NodeData model)
         {
+            ViewBag.Success = false;
+
             if (ModelState.IsValid)
             {
                 if (model.Age != 0)
                 {
                     MyApiController mac = new MyApiController();
                     mac.Post(model.Age, model.Name);
-                    return PartialView("Success");
+                    ViewBag.Success = true;
                 }
             }
             return View();

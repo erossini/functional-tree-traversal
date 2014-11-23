@@ -16,7 +16,14 @@
     </section>
     <section class="content-wrapper main-content clear-fix">
         <h2>New Node</h2>
-        @Html.Partial("Node")
+        @if (!ViewBag.Success)
+        {
+            @Html.Partial("Node")
+        }
+        else
+        {
+            @Html.Partial("Success")
+        }
     </section>
 
 @section Scripts {

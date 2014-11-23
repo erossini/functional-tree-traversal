@@ -102,6 +102,10 @@ namespace functional_tree_traversal
         {
             this.StatusBarItem1.Content = "Update tree in progress...";
             this.UpdateLayout();
+
+            TreeDatabase td = new TreeDatabase();
+            _tree = td.Load();
+            
             PaintTree();
         }
 
