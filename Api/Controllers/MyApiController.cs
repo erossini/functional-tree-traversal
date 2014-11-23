@@ -10,14 +10,24 @@ namespace Api.Controllers
 {
     public class MyApiController : ApiController
     {
-        public IEnumerable<string> Get()
+        public IHttpActionResult Get(int Age, string Name)
         {
-            return new string[] { "value1", "value2" };
-        }
+            int rtn = 0;
+            BinaryTree _tree = new BinaryTree();
+            TreeDatabase td = new TreeDatabase();
 
-        public IEnumerable<string> Get(int Age, string Name)
-        {
-            return new string[] { "value1", "value2" };
+            _tree = td.Load();
+            rtn = _tree.Contains(new NodeData { Age = Age, Name = Name });
+
+            td = null;
+            _tree = null;
+
+            if (rtn == -1)
+            {
+                return NotFound();
+            }
+
+            return Ok(rtn);
         }
 
         // POST api/api

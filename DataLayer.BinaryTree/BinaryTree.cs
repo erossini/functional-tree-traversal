@@ -59,6 +59,28 @@ namespace DataLayer.BinaryTree
             return RootNode.Right == null ? null : RootNode.Right.Draw(out temp);
         }
 
+        public int Contains(NodeData data)
+        {
+            // search the tree for a node that contains data
+            Node current = RootNode;
+            int result;
+            while (current != null)
+            {
+                result = current.Value.Age.CompareTo(data.Age);
+                if (result == 0)
+                    // we found data
+                    return current.Value.NodeId;
+                else if (result > 0)
+                    // current.Value > data, search current's left subtree
+                    current = current.Left;
+                else if (result < 0)
+                    // current.Value < data, search current's right subtree
+                    current = current.Right;
+            }
+
+            return -1;       // didn't find data
+        }
+
         /// <summary>
         /// returns true if the current node or it's childs containd the inserted value
         /// </summary>

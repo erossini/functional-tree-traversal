@@ -96,6 +96,8 @@ namespace functional_tree_traversal
 
             td.DeleteAll();
             td.Save(_tree);
+
+            int rsl = _tree.Contains(new NodeData { Age = 40, Name = "James" });
         }
 
         void dispatcherTimer_Tick(object sender, EventArgs e)
