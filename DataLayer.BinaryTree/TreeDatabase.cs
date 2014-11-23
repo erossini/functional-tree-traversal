@@ -50,11 +50,16 @@ namespace DataLayer.BinaryTree
             // Execute the query
             SqlDataReader rdr = oCmd.ExecuteReader();
 
+            List<int> nodeid = new List<int>();
             // Fill the list box with the values retrieved
             while (rdr.Read())
             {
-                DeleteNode(Convert.ToInt16(rdr["node_id"]));
+                nodeid.Add(Convert.ToInt16(rdr["node_id"]));
             }
+            rdr.Close();
+
+            foreach (int id in nodeid)
+                DeleteNode(id);
 
             CloseConnection();
         }
@@ -95,12 +100,22 @@ namespace DataLayer.BinaryTree
             // Fill the list box with the values retrieved
             while (rdr.Read())
             {
-                _tree.Add(new Node(new NodeData
+                if (Convert.ToInt16(rdr["Age"]) == -1)
                 {
-                    Age = Convert.ToInt16(rdr["Age"]),
-                    Name = rdr["Name"].ToString(),
-                    NodeId = Convert.ToInt16(rdr["node_id"])
-                }));                
+                    _tree = new BinaryTree(new Node(new NodeData
+                    {
+                        Age = -1, Name = "", NodeId = Convert.ToInt16(rdr["node_id"])
+                    }));
+                }
+                else
+                {
+                    _tree.Add(new Node(new NodeData
+                    {
+                        Age = Convert.ToInt16(rdr["Age"]),
+                        Name = rdr["Name"].ToString(),
+                        NodeId = Convert.ToInt16(rdr["node_id"])
+                    }));
+                }
             }
 
             CloseConnection();

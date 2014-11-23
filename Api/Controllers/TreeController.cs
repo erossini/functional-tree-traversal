@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer.BinaryTree;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,17 @@ namespace Api.Controllers
 {
     public class TreeController : Controller
     {
-        public ActionResult NewNode()
+        public ActionResult NewNode(NodeData model)
         {
+            if (ModelState.IsValid)
+            {
+                if (model.Age != 0)
+                {
+                    MyApiController mac = new MyApiController();
+                    mac.Post(model.Age, model.Name);
+                    return PartialView("Success");
+                }
+            }
             return View();
         }
     }

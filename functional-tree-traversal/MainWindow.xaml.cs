@@ -47,7 +47,12 @@ namespace functional_tree_traversal
         public MainWindow()
         {
             InitializeComponent();
-            
+
+            System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+
             //_tree = new BinaryTree();
 
             TreeDatabase td = new TreeDatabase();
@@ -91,6 +96,13 @@ namespace functional_tree_traversal
 
             td.DeleteAll();
             td.Save(_tree);
+        }
+
+        void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            this.StatusBarItem1.Content = "Update tree in progress...";
+            this.UpdateLayout();
+            PaintTree();
         }
 
         public void Preorder(Node Root)

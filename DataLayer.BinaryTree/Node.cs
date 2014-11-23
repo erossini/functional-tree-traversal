@@ -202,7 +202,7 @@ namespace DataLayer.BinaryTree
         /// </summary>
         public bool Exists(Node value)
         {
-            var res = value.Value.Age == Value.Age;
+            var res = ((value.Value.Age == Value.Age) && (value.Value.Name == Value.Name));
             if (!res && Left != null)
                 res = Left.Exists(value);
             if (!res && Right != null)

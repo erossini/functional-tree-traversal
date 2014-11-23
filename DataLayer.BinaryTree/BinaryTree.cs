@@ -18,6 +18,11 @@ namespace DataLayer.BinaryTree
             RootNode = new Node(new NodeData { Age = -1, Name = "" });
         }
 
+        public BinaryTree(Node _rootNode)
+        {
+            RootNode = _rootNode;
+        }
+
         /// <summary>
         /// adds a node to the tree
         /// </summary>
