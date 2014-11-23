@@ -6,3 +6,5 @@ D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\obj\Debug\
 D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\bin\Debug\DataLayer.BinaryTree.dll.config
 D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\bin\Debug\EntityFramework.dll
 D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\bin\Debug\EntityFramework.xml
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\bin\Debug\EntityFramework.SqlServer.dll
+D:\TestCareers\AdBrain\functional-tree-traversal\DataLayer.BinaryTree\bin\Debug\EntityFramework.SqlServer.xml

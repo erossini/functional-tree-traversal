@@ -7,6 +7,7 @@ using System.Web.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Api;
 using Api.Controllers;
+using System.Web.Http.Results;
 
 namespace Api.Tests.Controllers
 {
@@ -14,31 +15,16 @@ namespace Api.Tests.Controllers
     public class MyApiControllerTest
     {
         [TestMethod]
-        public void Get()
+        public void Find_a_node_of_tree_that_it_exists()
         {
             // Arrange
             MyApiController controller = new MyApiController();
 
-            // Act
-            IEnumerable<string> result = controller.Get();
+            var result = controller.Get(40, "") as OkNegotiatedContentResult<int>;
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(2, result.Count());
-            Assert.AreEqual("value1", result.ElementAt(0));
-            Assert.AreEqual("value2", result.ElementAt(1));
-        }
-
-        [TestMethod]
-        public void Post()
-        {
-            // Arrange
-            ValuesController controller = new ValuesController();
-
-            // Act
-            controller.Post("value");
-
-            // Assert
+            Assert.AreEqual(184, result.Content);
         }
     }
 }
