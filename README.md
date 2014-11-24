@@ -1,4 +1,4 @@
-functional-tree-traversal
+Functional tree Traversal
 =========================
 
 This soluton implements a method with WebAPI 2.2 to receive a POST request with the following properties:
@@ -13,3 +13,5 @@ The solution has:
 - DataLayer.BinaryTree: it is implemented functions and logical to manage the binary tree and save on database it (for SQL Server there are the scripts)
 - TestForm: it is the form to show the tree graph in WinForms
 - functional-tree-traversal: it is the WPF form that shows the binary tree with my draw functions (you can view in the Wiki an examples) and check every second if in the database there are new changes.
+
+This solution is developed in C# and SQL Server 2008. In SQL Server I use a hierarchical field.
